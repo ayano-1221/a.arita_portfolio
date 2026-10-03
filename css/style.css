@@ -1,0 +1,372 @@
+/* 共通 */
+
+/* =========================================================
+   色の設定：ここを変えると画面全体の印象が変わります
+   ========================================================= */
+:root {
+  --bg: #292929; /* ページの背景（グレー） */
+  /* --surface: #effcff; パネルやボタンの背景 */
+  --text: #ffffff; /* 基本の文字色 */
+  /* --muted: #5f6b73; 補足テキストの色（やや青みのグレー） */
+  /* --border: #dcdfe2; 枠線の色 */
+  --accent: #ff6f31; /* アクセント色（時計や見出しの強調）：くすんだブルー */
+
+  /* ↑変数を作って下で変数名で指定する。　ここを変えたら全部一気に変えれる。カラーだけじゃなくて余白とかも使える。　*/
+}
+
+
+body {
+  background-color: var(--bg);
+  color:var(--text);
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: .1rem;
+  font-size: 1.5rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+h3 {
+  color: var(--accent);
+  font-size: 2rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 10rem 0 5rem -4rem;
+}
+
+h3::before {
+  content: '';
+  display: inline-block;
+  height: 2px;
+  width: 50px;
+  background-color: var(--accent);
+}
+
+/* header
+==================================*/
+header{
+    background-color: #393939;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10rem;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+header ul {
+  display: flex;
+  gap: 2.5rem;
+}
+
+nav{
+  font-size: 2rem;
+}
+
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -.7rem;
+  width: 0;
+  height: 1px;
+  background: var(--accent);
+  transition: 0.3s;
+
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* fv
+==================================*/
+.fv{
+  background-color: #393939;
+}
+.fv .container {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  min-height: 70vh;
+}
+
+.fv_text {
+  flex: .7;
+}
+.fv_text h2 {
+  font-size: 8rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  letter-spacing: .3rem;
+  line-height: 1;
+}
+.fv_text h2 span{
+  color: var(--accent);
+}
+.fv_text p:nth-of-type(1){
+  font-size: 7rem;
+  letter-spacing: .3rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.fv_text p:nth-of-type(2){
+  font-size: 2rem;
+  font-family: "Josefin Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  margin-top: 2rem;
+}
+
+
+.f_img {
+  flex: 1;
+  min-width: 500px;
+}
+
+.f_img img {
+  width: 100%;
+}
+
+
+
+/* about
+==================================*/
+/* .prof_box{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+} */
+
+.prof_item{
+  display: flex;
+  gap: 3rem;
+  line-height: 2;
+}
+
+.prof_item dt{
+  width:10rem;
+  font-weight: 500;
+
+}
+#about p{
+  margin-top: 3rem;
+}
+
+/* .prof_box a{
+  align-self: flex-end;
+} */
+/* .prof_box a:hover{
+  color: var(--accent);
+  transition: .5s;
+}
+.prof_box a span {
+  color: var(--accent);
+
+} */
+/* skill
+==================================*/
+
+.skill_list {
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.skill_card img{
+  height: 100px;
+}
+
+.skill_card {
+  text-align: center;
+
+}
+.skill_card h4{
+  margin-top: .3rem;
+  font-weight: 400;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+/* works
+==================================*/
+/* web */
+#works h4{
+  margin: 5rem auto;
+  text-align: center;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+  text-decoration-thickness: 1px;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.works_card{
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 2rem;
+  margin-bottom: 15rem;
+}
+
+
+.work_title{
+  margin-left: -4rem;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.works_text p{
+  margin-top: 1rem;
+}
+
+.work_title span{
+  color: var(--accent);
+  font-size: 3rem;
+  font-weight: 200;
+  margin-right: 1rem;
+}
+
+
+.works_text{
+  display: flex;
+  flex-direction: column;
+}
+.works_text a{
+  margin-top: auto;
+  align-self: flex-end;
+}
+.works_text a span {
+  color: var(--accent);
+  padding-left: 1rem;
+}
+.works_text a:hover{
+  color: var(--accent);
+  transition: .5s;
+}
+
+
+/* graphic */
+.graphic_list{
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  height: 20rem;
+}
+
+.graphic_design a{
+    display: block;
+    text-align: right;
+    margin-top: 3rem;
+}
+.graphic_design a span {
+  color: var(--accent);
+}
+.graphic_design a:hover{
+  color: var(--accent);
+  transition: .5s;
+}
+
+
+
+/* contact
+==================================*/
+.contact_mail{
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+#contact a img{
+  height: 2rem;
+}
+#contact a{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+
+.page_top{
+
+  width: 4rem;
+  height: 4rem;
+
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  transition: .3s;
+  position: fixed;
+  right: 5rem;
+  bottom: 5rem;
+  z-index: 100;
+  
+}
+
+.page_top::before{
+  content: "";
+  width: 1rem;
+  height: 1rem;
+
+  border-top: 2px solid var(--accent);
+  border-right: 2px solid var(--accent);
+
+  transform: rotate(-45deg);
+}
+
+.page_top:hover{
+  background-color: #ff6f3115 ;
+}
+/* footer
+==================================*/
+footer{
+  background-color: #393939;
+  display: flex;
+  height: 4rem;
+  margin-top:100px;
+}
+
+footer p{
+  text-align: center;
+}
