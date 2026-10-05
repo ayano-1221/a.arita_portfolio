@@ -294,6 +294,19 @@ html{
   scroll-behavior: smooth;
 }
 
+
+@media screen and (max-width:768px){
+
+.skill_list{
+  flex-wrap: wrap;
+}
+
+.skill_card{
+  width: calc(50% - 1rem);
+}
+}
+
+
 /* works
 ==================================*/
 
@@ -377,6 +390,12 @@ html{
 @media screen and (max-width:768px) {
 
   /* web */
+#works h4{
+  margin: 3rem auto;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
 
   .works_card{
     flex-direction: column;
@@ -404,25 +423,33 @@ html{
   color: var(--accent);
 }
 
-
-
 /* graphic */
-
 .graphic_list{
+  flex-direction: column;
+  /* width: 80%; */
+  margin: 0 auto;
+  height: auto;
+}
+
+.graphic_list img{
+  width: 100%;
+}
+
+/* .graphic_list{
   gap: .5rem;
   height: 15rem;
-}
+} */
 
 .graphic_design{
   text-align: right;
-}
+} 
 
 .graphic_design a{
   display: inline-block;
   border-bottom: 1px solid var(--accent);
   padding-bottom: .7rem;
   color: var(--accent);
-  margin-top: 1.5rem;
+  margin-top: 2rem;
 }
 
 
