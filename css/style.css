@@ -237,11 +237,7 @@ nav a:hover::after {
 
 /* about
 ==================================*/
-/* .prof_box{
-  display: flex;
-  gap: 2rem;
-  justify-content: space-between;
-} */
+
 
 .prof_item{
   display: flex;
@@ -258,17 +254,11 @@ nav a:hover::after {
   margin-top: 3rem;
 }
 
-/* .prof_box a{
-  align-self: flex-end;
-} */
-/* .prof_box a:hover{
-  color: var(--accent);
-  transition: .5s;
+.prof_item dd{
+  flex: 1;
 }
-.prof_box a span {
-  color: var(--accent);
 
-} */
+
 /* skill
 ==================================*/
 
@@ -282,6 +272,7 @@ nav a:hover::after {
 }
 
 .skill_card {
+ 
   text-align: center;
 
 }
@@ -435,10 +426,7 @@ html{
   width: 100%;
 }
 
-/* .graphic_list{
-  gap: .5rem;
-  height: 15rem;
-} */
+
 
 .graphic_design{
   text-align: right;
