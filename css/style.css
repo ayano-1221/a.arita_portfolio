@@ -3,7 +3,7 @@
 :root {
   --bg: #292929; /* ページの背景（グレー） */
   --text: #ffffff; /* 基本の文字色 */
-  --accent: #ff6f31; /* アクセント色（時計や見出しの強調）：くすんだブルー */
+  --accent: #ff6f31; /* アクセント色*/
 }
 
 
@@ -60,7 +60,7 @@ h3::before {
 
 
   body {
-  font-size: 1.2rem;
+  font-size: 1rem;
   }
 
 
@@ -198,7 +198,7 @@ nav a:hover::after {
 
 
 
-@media screen and (max-width:768px){
+@media screen and (max-width:768px) {
 
 .fv .fv_box{
   flex-direction: column-reverse;
@@ -230,7 +230,6 @@ nav a:hover::after {
   flex: none;
   width: 100%;
 }
-
 
 }
 
@@ -415,9 +414,8 @@ html{
 }
 
 /* graphic */
-.graphic_list{
+/* .graphic_list{
   flex-direction: column;
-  /* width: 80%; */
   margin: 0 auto;
   height: auto;
 }
@@ -438,6 +436,50 @@ html{
   padding-bottom: .7rem;
   color: var(--accent);
   margin-top: 2rem;
+} */
+
+
+
+/* graphic */
+.graphic_list {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  margin: 0;
+  height: auto;
+
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+
+  /* スクロールバーを非表示 */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.graphic_list::-webkit-scrollbar {
+  display: none;
+}
+
+
+.graphic_design a {
+  display: inline-block;
+  border-bottom: 1px solid var(--accent);
+  padding-bottom: .7rem;
+  color: var(--accent);
+  margin-top: 2rem;
+}
+
+/* 画像の高さを統一 */
+.graphic_list img {
+  flex: 0 0 80%;
+  width: 80%;
+  height: 27rem;
+  object-fit: contain;
+  scroll-snap-align: start;
+}
+
+.graphic_design {
+  text-align: right;
 }
 
 
