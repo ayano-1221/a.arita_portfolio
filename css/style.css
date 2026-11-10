@@ -20,6 +20,7 @@ body {
 img {
   max-width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 a {
@@ -71,6 +72,10 @@ h3 {
   margin: 6rem 0 3rem 0;
 }
 
+body{
+  max-width: 100%;
+  margin: 0 auto;
+}
 
 
 }
@@ -90,13 +95,13 @@ header{
 }
 
 header .container {
-  width: 90%;
+  width: 85%;
   max-width: none;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 10rem;
+  height: 7rem;
 }
 
 header h1 {
@@ -105,7 +110,7 @@ header h1 {
 
 header ul {
   display: flex;
-  gap: 2.5rem;
+  gap: 2rem;
 }
 
 nav{
@@ -152,17 +157,23 @@ nav a:hover::after {
 .fv .fv_box {
   display: flex;
   align-items: center;
-  gap: 5rem;
-  min-height: 70vh;
-  width: 90%;
+  justify-content: space-between;
+  gap: 2rem;
+  min-height: 50vh;
+  max-width: 85%;
   margin: 0 auto;
 }
 
 .fv_text {
-  flex: .7;
+  flex: 4 1 0;
+}
+
+.fv_img {
+  flex: 6 1 0;
+
 }
 .fv_text h2 {
-  font-size: 8rem;
+  font-size: clamp(4rem, 7vw, 8rem);
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
   font-weight: 500;
@@ -174,7 +185,7 @@ nav a:hover::after {
   color: var(--accent);
 }
 .fv_text p:nth-of-type(1){
-  font-size: 7rem;
+   font-size: clamp(3rem, 6vw, 7rem);
   letter-spacing: .3rem;
   font-family: "Josefin Sans", sans-serif;
   font-optical-sizing: auto;
@@ -192,14 +203,9 @@ nav a:hover::after {
 }
 
 
-.f_img {
-  flex: 1;
-  min-width: 500px;
-}
 
-.f_img img {
-  width: 100%;
-}
+
+
 
 
 
@@ -209,6 +215,8 @@ nav a:hover::after {
   flex-direction: column-reverse;
   gap: 2rem;
   width: 100%;
+  max-width: 100%;
+  min-height: fit-content;
 }
 
 .fv_text h2{
@@ -245,6 +253,7 @@ nav a:hover::after {
 
 .prof_item{
   display: flex;
+  align-items: center;
   gap: 3rem;
   line-height: 2;
 }
@@ -254,12 +263,16 @@ nav a:hover::after {
   font-weight: 500;
 
 }
-#about p{
-  margin-top: 3rem;
-}
+
 
 .prof_item dd{
   flex: 1;
+  font-size: 1.2rem;
+}
+
+#about p{
+  margin-top: 3rem;
+  font-size: 1rem;
 }
 
 
@@ -269,7 +282,7 @@ nav a:hover::after {
 .skill_list {
   display: flex;
   justify-content: space-around;
-  gap: 2rem;
+  gap: 1.5rem;
 }
 .skill_card img{
   height: 100px;
@@ -281,8 +294,12 @@ nav a:hover::after {
 
 }
 .skill_card h4{
-  margin-top: .3rem;
+  margin-top: .5rem;
   font-weight: 400;
+}
+
+.skill_card p{
+  font-size: 1rem;
 }
 
 html{
@@ -311,19 +328,23 @@ html{
   text-align: center;
   text-decoration: underline;
   text-underline-offset: 1rem;
-  text-decoration-thickness: 1px;
+  text-decoration-thickness: .5px;
   font-size: 2rem;
   font-weight: 400;
 }
 .works_card{
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: stretch;
-  gap: 2rem;
+  gap: 2.5rem;
   margin-bottom: 15rem;
 }
 
-
+.works_card img{
+    width: 65%;
+  height: auto;
+  object-fit: cover;
+}
 .work_title{
   font-size: 2rem;
   font-weight: 400;
@@ -341,10 +362,15 @@ html{
   margin-right: 1rem;
 }
 
+.works_text p:nth-of-type(3){
+  font-size: 1rem;
+}
 
 .works_text{
   display: flex;
   flex-direction: column;
+    flex: 1;
+  min-width: 0;
 }
 .works_text a{
   margin-top: auto;
@@ -416,6 +442,13 @@ html{
   border-bottom: 1px solid var(--accent);
   padding-bottom: .7rem;
   color: var(--accent);
+}
+
+.works_card img{
+    width: 90%;
+  height: auto;
+  margin: 0 auto;
+  object-fit: cover;
 }
 
 /* graphic */
@@ -493,6 +526,10 @@ html{
 
 /* contact
 ==================================*/
+
+#contact{
+  font-size: 1.2rem;
+}
 .contact_mail{
   display: flex;
   gap: 2rem;
@@ -518,8 +555,8 @@ html{
 
 .page_top{
 
-  width: 4rem;
-  height: 4rem;
+  width: 3.5rem;
+  height: 3.5rem;
 
   border: 1px solid var(--accent);
   border-radius: 50%;
@@ -530,25 +567,28 @@ html{
 
   transition: .3s;
   position: fixed;
-  right: 5rem;
-  bottom: 5rem;
+  right: 3rem;
+  bottom: 3rem;
   z-index: 100;
   
 }
 
 .page_top::before{
   content: "";
+  position: absolute;
+ top: 43%;
   width: 1rem;
   height: 1rem;
 
-  border-top: 2px solid var(--accent);
-  border-right: 2px solid var(--accent);
+  border-top: 1px solid var(--accent);
+  border-right: 1px solid var(--accent);
 
   transform: rotate(-45deg);
 }
 
+
 .page_top:hover{
-  background-color: #ff6f3115 ;
+  background-color: #ff6f3123 ;
 }
 /* footer
 ==================================*/
@@ -563,6 +603,7 @@ footer{
 
 footer p{
   text-align: center;
+  /* font-size: 1rem; */
 }
 
 
@@ -574,3 +615,5 @@ footer{
 }
 
 }
+
+
