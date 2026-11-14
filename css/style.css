@@ -162,6 +162,7 @@ nav a:hover::after {
   min-height: 50vh;
   max-width: 85%;
   margin: 0 auto;
+  padding-bottom: 3rem;
 }
 
 .fv_text {
@@ -280,9 +281,10 @@ nav a:hover::after {
 ==================================*/
 
 .skill_list {
-  display: flex;
-  justify-content: space-around;
-  gap: 1.5rem;
+  display:grid;
+grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
+
+  gap: 2rem 1.5rem;
 }
 .skill_card img{
   height: 100px;
@@ -313,10 +315,10 @@ html{
   flex-wrap: wrap;
 }
 
-.skill_card{
+/* .skill_card{
   width: calc(50% - 1rem);
-}
-}
+}*/
+} 
 
 
 /* works
@@ -615,5 +617,4 @@ footer{
 }
 
 }
-
 
